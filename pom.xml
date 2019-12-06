@@ -13,6 +13,7 @@
         <project.build.target>1.8</project.build.target>
         <org.apache.commons.io.version>2.6</org.apache.commons.io.version>
         <org.apache.commons.lang3.version>3.9</org.apache.commons.lang3.version>
+        <org.apache.commons.collections4.version>4.3</org.apache.commons.collections4.version>
     </properties>
 
     <build>
@@ -41,6 +42,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${org.apache.commons.lang3.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${org.apache.commons.collections4.version}</version>
         </dependency>
 
     </dependencies>
