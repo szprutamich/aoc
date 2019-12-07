@@ -13,10 +13,8 @@ public class Day5 {
 
     public static void main(String[] args) throws Exception {
         long start = System.currentTimeMillis();
-        System.out.println("A");
-        new Day5().solve(1);
-        System.out.println("B");
-        new Day5().solve(5);
+        System.out.println("A: " + new Day5().solve(1));
+        System.out.println("B: " + new Day5().solve(5));
         System.out.println(String.format("Time: %sms", System.currentTimeMillis() - start));
     }
 
@@ -25,9 +23,13 @@ public class Day5 {
                 .map(Integer::parseInt).collect(Collectors.toList());
     }
 
-    private void solve(int inputNr) {
+    Day5(List<Integer> input) {
+        this.input = input;
+    }
+
+    public int solve(int inputNr) {
         List<Integer> original = new ArrayList<>(input);
-        int output;
+        int output = -1;
         for (int i = 0; i < input.size(); ) {
             int instruction = input.get(i);
 
@@ -50,7 +52,6 @@ public class Day5 {
                     break;
                 case 4:
                     output = input.get(input.get(i + 1));
-                    System.out.println("OUT: " + output);
                     i += 2;
                     break;
                 case 5:
@@ -87,11 +88,11 @@ public class Day5 {
                     break;
                 case 99:
                     input = original;
-                    return;
+                    return output;
                 default:
                     throw new RuntimeException("Wrong input");
             }
         }
-        throw new RuntimeException("Wrong input");
+        return output;
     }
 }
