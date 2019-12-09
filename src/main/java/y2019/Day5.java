@@ -23,11 +23,7 @@ public class Day5 {
                 .map(Integer::parseInt).collect(Collectors.toList());
     }
 
-    Day5(List<Integer> input) {
-        this.input = input;
-    }
-
-    public int solve(int inputNr) {
+    private int solve(int inputNr) {
         List<Integer> original = new ArrayList<>(input);
         int output = -1;
         for (int i = 0; i < input.size(); ) {
