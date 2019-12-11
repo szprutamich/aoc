@@ -13,10 +13,10 @@ public class Day10 {
 
     public static void main(String[] args) throws Exception {
         long start = System.currentTimeMillis();
-        Day10 day8 = new Day10();
-        Pair<Integer, Integer> station = day8.solveA();
-        System.out.println("A: " + day8.data.get(station).size());
-        System.out.println("B: " + day8.solveB(station));
+        Day10 day10 = new Day10();
+        Pair<Integer, Integer> station = day10.solveA();
+        System.out.println("A: " + day10.data.get(station).size());
+        System.out.println("B: " + day10.solveB(station));
         System.out.println(String.format("Time: %sms", System.currentTimeMillis() - start));
     }
 
