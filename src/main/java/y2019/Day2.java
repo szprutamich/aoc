@@ -46,7 +46,7 @@ public class Day2 {
         throw new RuntimeException("Wrong input");
     }
 
-    private int solveB() throws Exception {
+    private int solveB() {
         int noun;
         int verb;
         for (noun = 0; noun < 100; noun++) {
