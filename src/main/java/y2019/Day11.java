@@ -6,6 +6,7 @@ import utils.Util;
 import java.util.HashMap;
 import java.util.Map;
 
+// TODO refactor, use Intcode
 public class Day11 {
 
     private static int SIZE = Integer.MAX_VALUE / 1024;
