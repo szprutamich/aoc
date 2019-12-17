@@ -6,6 +6,9 @@ import utils.Util;
 import java.util.HashMap;
 import java.util.Map;
 
+import static utils.PairHelper.LEFT;
+import static utils.PairHelper.RIGHT;
+
 // TODO refactor, use Intcode
 public class Day11 {
 
@@ -160,22 +163,5 @@ public class Day11 {
         private long getNumber(int i, int arg, long relativeBase) {
             return input[getPosition(i, arg, relativeBase)];
         }
-    }
-
-    private static Map<Pair<Integer, Integer>, Pair<Integer, Integer>> LEFT = new HashMap<>();
-    private static Map<Pair<Integer, Integer>, Pair<Integer, Integer>> RIGHT = new HashMap<>();
-
-    static {
-        LEFT.put(Pair.of(0, -1), Pair.of(-1, 0)); // up -> left
-        LEFT.put(Pair.of(-1, 0), Pair.of(0, 1)); // left -> down
-        LEFT.put(Pair.of(0, 1), Pair.of(1, 0)); // down -> right
-        LEFT.put(Pair.of(1, 0), Pair.of(0, -1)); // right -> up
-    }
-
-    static {
-        RIGHT.put(Pair.of(0, -1), Pair.of(1, 0)); // up -> right
-        RIGHT.put(Pair.of(1, 0), Pair.of(0, 1)); // right -> down
-        RIGHT.put(Pair.of(0, 1), Pair.of(-1, 0)); // down -> left
-        RIGHT.put(Pair.of(-1, 0), Pair.of(0, -1)); // left -> up
     }
 }
